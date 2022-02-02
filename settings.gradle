@@ -1,1 +1,12 @@
-rootProject.name = "golf-brian-nicola"
+rootProject.name = 'refactoring-golf-java'
+include 'ROUND_1_A'
+include 'ROUND_1_B'
+include 'ROUND_2_A'
+include 'ROUND_2_B'
+include 'ROUND_3_A'
+include 'ROUND_3_B'
+include 'ROUND_4_A'
+include 'ROUND_4_B'
+include 'ROUND_5_A'
+include 'ROUND_5_B'
+
