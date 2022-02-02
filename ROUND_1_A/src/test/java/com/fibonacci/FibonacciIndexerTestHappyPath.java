@@ -13,18 +13,18 @@ import static org.junit.Assert.assertEquals;
 
 
 @RunWith(Parameterized.class)
-public class FibonacciIndexTest {
+public class FibonacciIndexerTestHappyPath {
 
     private final int expectedIndex;
     private final long fibonacci;
-    private FibonacciIndex fibonacciIndex;
+    private FibonacciIndexer fibonacciIndexer;
 
     @Before
     public void setUp() {
-        fibonacciIndex = new FibonacciIndex();
+        fibonacciIndexer = new FibonacciIndexer();
     }
 
-    public FibonacciIndexTest(int expectedIndex, long fibonacci) {
+    public FibonacciIndexerTestHappyPath(int expectedIndex, long fibonacci) {
         this.expectedIndex = expectedIndex;
         this.fibonacci = fibonacci;
     }
@@ -39,18 +39,7 @@ public class FibonacciIndexTest {
 
     @Test
     public void findsIndexOfFibonacciNumber() {
-        assertEquals(expectedIndex, fibonacciIndex.findIndexOf(fibonacci));
+        assertEquals(expectedIndex, fibonacciIndexer.findIndexOf(fibonacci));
     }
-
-    @Test
-    public void whenNumberNotFoundThenIndexIsMinusOne() {
-        assertEquals(-1, fibonacciIndex.findIndexOf(7));
-    }
-
-    @Test
-    public void cannotFindIndexOfNegativeNumber() {
-        assertEquals(-1, fibonacciIndex.findIndexOf(-1));
-    }
-
 
 }
