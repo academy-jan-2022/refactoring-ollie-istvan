@@ -6,7 +6,6 @@ import java.util.List;
 
 public class FibonacciIndex {
 
-
     int findIndexOf(long fibonacci) {
         if (fibonacci >= 0 && fibonacci < 2) {
             return (int) fibonacci;
